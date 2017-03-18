@@ -8,7 +8,17 @@ class App extends Component {
       <ThemeProvider theme={{ gutter: 10, medium: 640, large: 1024, maxWidth: 1200 }}>
         <div>
           <Row spacer={20}>
-            <Column><h1>Responsive Grids</h1></Column>
+            <Column><h1>React Styled Grid Demo</h1></Column>
+            <Column>
+              <p>
+                Grid system based on styled-components and foundation grid
+                {' ~ '}
+                <a href="//github.com/ihenvyr/react-styled-grid/blob/master/docs/App.js">Code</a>
+              </p>
+            </Column>
+          </Row>
+          <Row spacer={20}>
+            <Column><h2>Responsive Grids</h2></Column>
 
             <Column small={6/12} medium={4/12} large={3/12}><Panel>column</Panel></Column>
             <Column small={6/12} medium={4/12} large={3/12}><Panel>column</Panel></Column>
@@ -25,7 +35,7 @@ class App extends Component {
           </Row>
 
           <Row spacer={20}>
-            <Column><h1>Nested Grids</h1></Column>
+            <Column><h2>Nested Grids</h2></Column>
 
             <Column medium={4/12}>
               <Row>
@@ -50,7 +60,7 @@ class App extends Component {
           </Row>
 
           <Row spacer={20}>
-            <Column><h1>12 Column Grid</h1></Column>
+            <Column><h2>12 Column Grid</h2></Column>
 
             <Column small={1/12} medium={1/12} large={1/12}><Panel>1</Panel></Column>
             <Column small={11/12} medium={11/12} large={11/12}><Panel>11</Panel></Column>
