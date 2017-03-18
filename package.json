@@ -1,8 +1,17 @@
 {
   "name": "react-styled-grid",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Grid system based on styled-components and foundation grid",
   "main": "dist/Grid.js",
+  "files": [
+    "dist",
+    "examples",
+    "src",
+    "LICENSE",
+    "README.md",
+    "webpack.config.js",
+    "yarn.lock"
+  ],
   "scripts": {
     "start": "webpack-dev-server",
     "test": "mocha --compilers js:babel-core/register src/Grid.spec.js -w",
