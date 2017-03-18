@@ -1,11 +1,11 @@
 {
   "name": "react-styled-grid",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Grid system based on styled-components and foundation grid",
   "main": "dist/Grid.js",
   "files": [
     "dist",
-    "examples",
+    "docs",
     "src",
     "LICENSE",
     "README.md",
