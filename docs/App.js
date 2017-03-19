@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { Row, Column, Panel } from '../src/Grid';
+
+const Title = styled.h1`
+  margin-bottom: 0;
+`;
 
 class App extends Component {
   render() {
@@ -8,12 +12,12 @@ class App extends Component {
       <ThemeProvider theme={{ gutter: 10, medium: 640, large: 1024, maxWidth: 1200 }}>
         <div>
           <Row spacer={20}>
-            <Column><h1>React Styled Grid Demo</h1></Column>
+            <Column><Title>React Styled Grid Demo</Title></Column>
             <Column>
               <p>
-                Grid system based on styled-components and foundation grid
+                A responsive fluid grid system built with <a href="https://github.com/styled-components/styled-components">styled-components</a> that uses <code>Row</code> and <code>Column</code> approach.
                 {' ~ '}
-                <a href="//github.com/ihenvyr/react-styled-grid/blob/master/docs/App.js">Code</a>
+                <a href="//github.com/ihenvyr/react-styled-grid/blob/master/docs/App.js">Example Code</a>
               </p>
             </Column>
           </Row>
