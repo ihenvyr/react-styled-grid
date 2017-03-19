@@ -1,5 +1,5 @@
 # react-styled-grid
-A fluid grid system based on styled-components and foundation that uses `Row` and `Column` approach
+A responsive fluid grid system built with [styled-components](https://github.com/styled-components/styled-components) that uses `Row` and `Column` approach
 
 ## Getting Started
 
@@ -39,13 +39,13 @@ const App = () => (
 export default App
 ```
 
-## Row Props
+## Row
 
 - `spacer`: (number) margin-top and margin-bottom
-- `expanded`: by default, an outer row is always 1200 pixels wide. Make a row completely fluid by adding `expanded` property
+- `expanded`: completely fluid (by default, a row is always 1200 pixels wide)
 - `collapse`: remove gutter on all devices
 
-## Column Props
+## Column
 
 - `small`: (number) width as a fraction for the small breakpoint and up
 - `medium`: (number) width as a fraction for the medium breakpoint and up
