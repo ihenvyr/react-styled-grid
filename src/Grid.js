@@ -7,10 +7,10 @@ const defaults = {
   maxWidth: 1200,
 };
 
-const width = key => props => props[key] ? `width: ${props[key] * 100}%;` : null;
+const width = key => props => props[key] && `width: ${props[key] * 100}%;`;
 const media = (key, modifier = 0) => ({ theme }) => theme[key] ? `${theme[key] - modifier}px` : `${defaults[key] - modifier}px`;
 const gutter = () => ({ theme }) => theme.gutter ? `${theme.gutter}px` : `${defaults.gutter}px`;
-const maxWidth = () => ({ theme }) => theme.maxWidth ? `${theme.maxWidth}px` : `${defaults.maxWidth}px`;
+const maxWidth = () => ({ theme, expanded }) => expanded ? 'none' : (theme.maxWidth ? `${theme.maxWidth}px` : `${defaults.maxWidth}px`);
 const spacer = () => props => props.spacer ? `${props.spacer}px` : '0 ';
 
 const RowBase = styled.div`
@@ -33,13 +33,6 @@ const RowBase = styled.div`
 `;
 RowBase.displayName = 'Row';
 
-export const Row = styled(RowBase)`
-  & ${RowBase} {
-    margin-right: -${gutter()};
-    margin-left: -${gutter()};
-  }
-`;
-
 const ColumnBase = styled.div`
   width: 100%;
   float: left;
@@ -53,12 +46,33 @@ const ColumnBase = styled.div`
 `;
 ColumnBase.displayName = 'Column';
 
+export const Row = styled(RowBase)`
+  & & {
+    margin-right: -${gutter()};
+    margin-left: -${gutter()};
+  }
+
+  & & {
+    ${props => props.collapse && `
+      margin-right: 0;
+      margin-left: 0;
+    `}
+  }
+  
+  & > ${ColumnBase} {
+    ${props => props.collapse && `
+      padding-right: 0;
+      padding-left: 0;
+    `}
+  }
+`;
+
 export const Column = styled(ColumnBase)`
   /* medium and up */
   @media print, screen and (min-width: ${media('medium')}) {
     & {
-      padding-right: ${gutter()};
-      padding-left: ${gutter()};
+      //padding-right: ${gutter()};
+      //padding-left: ${gutter()};
     }
   }
   
