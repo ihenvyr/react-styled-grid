@@ -70,10 +70,7 @@ export const Row = styled(RowBase)`
 export const Column = styled(ColumnBase)`
   /* medium and up */
   @media print, screen and (min-width: ${media('medium')}) {
-    & {
-      //padding-right: ${gutter()};
-      //padding-left: ${gutter()};
-    }
+    & {}
   }
   
   &:last-child:not(:first-child), &:last-child:not(:first-child) {
