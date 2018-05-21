@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
+  mode: 'none',
   entry: './docs/entry.js',
 
   output: {
@@ -10,12 +11,8 @@ module.exports = {
   },
 
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
+    rules: [
+      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
   },
 
