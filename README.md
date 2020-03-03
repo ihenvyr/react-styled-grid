@@ -1,5 +1,5 @@
 # react-styled-grid
-A responsive fluid grid system built with [styled-components](https://github.com/styled-components/styled-components) that uses `Row` and `Column` approach
+A responsive fluid grid system built with [styled-components](https://github.com/styled-components/styled-components) that uses `Row` and `Column` approach. For demo proceed to https://ihenvyr.github.io/react-styled-grid/
 
 ## Getting Started
 
